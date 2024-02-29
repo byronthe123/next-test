@@ -1,4 +1,6 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+'use client';
+
+import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { Input } from 'reactstrap';
@@ -11,7 +13,7 @@ const defaultCamera: MediaDeviceInfo = {
     toJSON: () => { }
 }
 
-export default function Settings() {
+export default withPageAuthRequired(function Settings() {
     const [cameras, setCameras] = useState<Array<MediaDeviceInfo>>([]);
     const [camera1, setCamera1] = useState<MediaDeviceInfo>(defaultCamera);
     const [camera2, setCamera2] = useState<MediaDeviceInfo>(defaultCamera);
@@ -40,9 +42,7 @@ export default function Settings() {
             />
         </Container>
     );
-};
-
-export const getServerSideProps = withPageAuthRequired();
+});
 
 const SelectCamera = ({
     cameraName,

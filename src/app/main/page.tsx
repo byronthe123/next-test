@@ -12,7 +12,7 @@ import styled from "styled-components";
 //     );
 // });
 
-export default function Main () {
+export default function App () {
     return (
         <Container>
             <Link href={'/settings'}>Settings</Link>
