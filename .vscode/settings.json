@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/7e3e84da-9cdf-4b81-a06e-e2d4c4536865/resourceGroups/appsvc_linux_centralus_premium/providers/Microsoft.Web/sites/kiosk",
+    "appService.deploySubpath": "."
+}
